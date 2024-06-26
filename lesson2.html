@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson2</title>
+    <style>
+     *{
+        position: relative;
+        top: 10%;
+        left: 10%; 
+    }
+    div{
+            height: 400px;
+            width: 400px;
+        }
+        #image2{
+            width: 125px;
+            position: absolute;
+            top: 15%;
+            left: 25%;
+        }
+        .btn{
+            padding-inline: 30px;
+            padding-block: 10px;
+            color: Green;
+            position: absolute;
+            top: 80%;
+            left: 30%
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <img id="image1" src="" alt="" style="display: none;">
+        <img id="image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Gluehlampe_01_KMJ.jpg/640px-Gluehlampe_01_KMJ.jpg" alt="">
+        <button class="btn">ON</button>
+    </div>
+
+<script>
+    const SelectBtn = document.querySelector('.btn');
+
+    function bulb(){
+        let img1 = document.getElementById('image1');
+        let img2 = document.getElementById('image2');
+
+        if(SelectBtn.textContent === "ON"){
+            img1.src = "https://clipartmag.com/images/light-bulb-picture-32.jpg";
+            img1.style.width = "250px";
+            img1.style.display = "block";
+            img2.style.display = "none";
+            SelectBtn.style.color = "blue"
+            SelectBtn.textContent = "OFF";
+        }else{
+            img1.style.display = "none";
+            img2.style.display = "block";
+            SelectBtn.style.color = "green";
+            SelectBtn.textContent = "ON";
+        }
+    }
+    SelectBtn.addEventListener('click',bulb);
+</script>
+
+
+</body>
+</html>

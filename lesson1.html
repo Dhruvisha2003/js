@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson1</title>
+    <style>
+        body {
+            margin: 100px;
+        }
+        button {
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="btn">
+       
+        <button id="onbtn">ON</button>
+        <img id="image1" src="" alt="Image will appear here" style="display:none;" />
+        <img id="image2" src="" alt="Image will appear here" style="display:none;" />
+        <button id="offbtn">OFF</button>
+   
+       
+    </div>
+
+    <script>
+        const btn = document.querySelector('#onbtn');
+        const btn1 = document.querySelector('#offbtn');
+
+        function on() {
+            let img1 = document.getElementById('image1');
+            img1.src = 'https://i.pinimg.com/originals/d9/9b/9c/d99b9c91d10233fb2df33a713d89f11a.jpg'
+            img1.style.width = "200px"
+            img1.style.paddingLeft = "100px";
+            img1.style.display = "block";
+
+            let img2 = document.getElementById('image2');
+            img2.style.display = "none";
+        }
+        function off() {
+            let img2 = document.getElementById('image2');
+            img2.src = 'https://www.pixelstalk.net/wp-content/uploads/images1/Incandescent-light-bulb-wallpaper-1920x1080.jpg'
+            img2.style.width = "400px";
+            img2.style.display = "block";
+
+            let img1 = document.getElementById('image1');
+            img1.style.display = "none";
+        }
+        btn.addEventListener('click', on);
+        btn1.addEventListener('click', off);
+    </script>
+</body>
+
+</html>

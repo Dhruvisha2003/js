@@ -1,0 +1,39 @@
+Steps to Connect GitHub Repo to Two Computers
+
+1. Clone the Repository on the First Computer
+    1. Open a terminal (or Git Bash on Windows).
+    2. Navigate to the directory where you want to clone the repository:
+        cd path/to/your/directory
+    3. Clone the repository:
+        git clone https://github.com/username/repository.git
+    4. Navigate into the repository:
+        cd repository
+2. Make Changes and Push to GitHub
+    1. Make some changes to the files in the repository.
+    2. Add and commit the changes:
+        git add .
+        git commit -m "Your commit message"
+    3. Push the changes to GitHub:
+        git push origin main (Replace 'main' with your branch name if it’s different)
+3. Clone the Repository on the Second Computer
+    1. Open a terminal.
+    2. Navigate to the directory where you want to clone the repository:
+        cd path/to/your/directory
+    3. Clone the repository:
+        git clone https://github.com/username/repository.git
+    4. Navigate into the repository:
+        cd repository
+4. Pull Changes from GitHub on the Second Computer
+    1. Pull the latest changes from GitHub to ensure you have the most recent version:
+        git pull origin main
+    2. Make changes, add, commit, and push:
+        git add .
+        git commit -m "Your commit message"
+        git push origin main
+5. Synchronize Changes Between Both Computers (Whenever you make changes on one computer and push them to GitHub, follow these steps on the other computer to get the latest changes:)
+    1. Open a terminal and navigate to the repository:
+        cd path/to/your/directory/repository
+    2. Pull the latest changes from GitHub:
+        git pull origin main
+
+

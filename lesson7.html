@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson7</title>
+    <style>
+        .slider {
+            overflow: hidden;
+            width: 1260px;
+            height: 700px;
+            position: relative;
+        }
+
+        .img {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .img.active {
+            display: block;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .button button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="img active" id="img1">
+            <img src="https://s1.upanh.pro/2018/04/14/mountains-skyscape-trees-wallpaper-3840x2400.jpg" height="700px"
+                width="1255px">
+        </div>
+        <div class="img" id="img2">
+            <img src="https://sun9-86.userapi.com/impg/Km3Dupk11K1VntgieZy8As9DeTsw4MVzvp-MFg/s2MVg2ur8Do.jpg?size=1280x853&quality=96&sign=811d6f4edb7fe630271627b225176013&c_uniq_tag=fAxWisd4PO0pQRurjnGYZoBM9ipuufDFzjOotVllYcA&type=album"
+                height="700px" width="1255px">
+        </div>
+        <div class="img" id="img3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Neeulm_Valley_AJK_%28Arang_Kel%29.jpg"
+                height="700px" width="1255px">
+        </div>
+        <div class="img" id="img4">
+            <img src="https://wallbox.ru/resize/1280x800/wallpapers/main/201313/965c9e0bf4acb4a.jpg" height="700px"
+                width="1255px">
+        </div>
+        <div class="img" id="img5">
+            <img src="https://www.westernunion.com/blog/wp-content/uploads/2016/06/10_Country_Facts_03.jpg"
+                height="700px" width="1255px">
+        </div>
+    </div>
+    <div class="button">
+        <div class="btn1" style="padding: 10px;">
+            <button class="previous" onclick="previous()">Previous</button>
+        </div>
+        <div class="btn2" style="padding: 10px;">
+            <button class="next" onclick="next()">Next</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        const images = document.querySelectorAll('.img');
+
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            for (let i = 0; i < images.length; i++) {
+                if (i === index) {
+                    images[i].style.display = "block";
+                    images[i].style.transition = ".5s"
+                } else {
+                    images[i].style.display = "none";
+                }
+            }
+        }
+
+        function next() {
+            currentImageIndex++;
+            if (currentImageIndex >= images.length) {
+                currentImageIndex = 0; 
+            }
+            showImage(currentImageIndex);
+        }
+
+        function previous() {
+            currentImageIndex--;
+            if (currentImageIndex < 0) {
+
+                currentImageIndex = images.length - 1; 
+                
+            }
+            showImage(currentImageIndex);
+        }
+
+    </script>
+</body>
+
+</html>
