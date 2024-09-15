@@ -39,15 +39,18 @@ let output;
 // console.log(output);
 
 
-// const pnode = document.querySelector('.parent');
-// output = pnode.childNodes;
+const pnode = document.querySelector('.parent');
+output = pnode.childNodes;
+output1 = pnode.children;
 
 // const cnode = document.querySelector('.child');
 // output = cnode.parentNode;
 
 // cnode.parentNode.style.backgroundColor = '#ccc';
 // cnode.parentNode.style.padding = '10px';
-// console.log(output);
+console.log(output);
+console.log(output1);
+
 
 
 
@@ -117,9 +120,9 @@ let output;
 // createNewItem('Strawberry');
 
 
-const logo = document.querySelector('img');
+// const logo = document.querySelector('img');
 
-function onClick(e) {
+// function onClick(e) {
   // Event properties
   // console.log(e.target);
   // console.log(e.currentTarget);
@@ -133,14 +136,14 @@ function onClick(e) {
   // console.log(e.pageY);
   // console.log(e.screenX);
   // console.log(e.screenY);
-}
+// }
 
-function onDrag(e) {
-  document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
-}
+// function onDrag(e) {
+//   document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
+// }
 
-logo.addEventListener('click', onClick);
-logo.addEventListener('drag', onDrag);
+// logo.addEventListener('click', onClick);
+// logo.addEventListener('drag', onDrag);
 
 
 // document.body.addEventListener('click', function (e) {
@@ -149,10 +152,10 @@ logo.addEventListener('drag', onDrag);
 // });
 
 // e.preventDefault() method prevents the default behavior
-document.querySelector('a').addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log('Link was clicked');
-});
+// document.querySelector('a').addEventListener('click', function (e) {
+//   e.preventDefault();
+//   console.log('Link was clicked');
+// });
 
 /*
 - `target` - The element that triggered the event
